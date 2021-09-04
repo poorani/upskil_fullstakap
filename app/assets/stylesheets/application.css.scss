@@ -30,18 +30,23 @@
  .navbar{
   border: none;
  }
+ 
+ /* css style comment*/
 .home_heading{
     color: black;
     margin: -20px;
     padding-top: 10px;
     padding-bottom: 20px;
 }
+
+//scss comment
+//combined scss style nested classes/selectors
 .navbar-default .navbar-brand{
  color: white;
+ &:hover{
+  color: white;
+  opacity: 0.75;
+  
+ }
 }
 
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
- color: white;
- opacity :0.75;
- 
-}
