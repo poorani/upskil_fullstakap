@@ -38,6 +38,9 @@ group :development, :test do
     
     #bootstrap 
     gem 'bootstrap-sass', '3.3.7'
+ 
+    #font awesome for icon   
+    gem 'font-awesome-sass', '~> 5.15.1'
 end
 
 group :development do
