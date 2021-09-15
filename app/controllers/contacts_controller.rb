@@ -9,9 +9,15 @@ class ContactsController < ApplicationController
                 @contact = Contact.new(contact_params)
                 
                 if @contact.save  # if contact object successfully saved in DB
-                        redirect_to new_contact_path, notice: "Message Sent"
+                flash[:success] ="Message Sent!" #improved flash msg
+                redirect_to new_contact_path
+                
+                #        redirect_to new_contact_path, notice: "Message Sent" # direct :notice msg
                 else
-                        redirect_to new_contact_path, notice: "Error Occured"
+                        flash[:error] = @contact.errors.full_messages.join(", " ) #improved error msgs
+                        redirect_to new_contact_path
+                        
+                        #redirect_to new_contact_path, notice: "Error Occured" # basic way of noticing error msg
                 end
                 
         end
