@@ -41,6 +41,9 @@ group :development, :test do
  
     #font awesome for icon   
     gem 'font-awesome-sass', '~> 5.15.1'
+    
+    #Hirb for DB presentation as table form
+    gem 'hirb', '0.7.3'
 end
 
 group :development do
