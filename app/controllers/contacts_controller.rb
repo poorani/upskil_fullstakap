@@ -14,7 +14,8 @@ class ContactsController < ApplicationController
                 
                 #        redirect_to new_contact_path, notice: "Message Sent" # direct :notice msg
                 else
-                        flash[:error] = @contact.errors.full_messages.join(", " ) #improved error msgs
+                        #flash[:error] = @contact.errors.full_messages.join(", " ) #improved error msgs
+                        flash[:danger] = @contact.errors.full_messages.join(", ") # changed the flash hash to danger to match bootstrp class
                         redirect_to new_contact_path
                         
                         #redirect_to new_contact_path, notice: "Error Occured" # basic way of noticing error msg

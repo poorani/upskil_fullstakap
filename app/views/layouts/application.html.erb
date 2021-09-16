@@ -51,7 +51,12 @@
     </div><!-- /.navbar-collapse -->
  </div>
 </nav>
-       
+<div class="container">
+    <% flash.each do |typ,msg| %>
+        <%= content_tag  :div, msg,class:"alert alert-#{typ}" %>
+    <% end %>
+</div>
+            
 
     
     <%= yield %>
