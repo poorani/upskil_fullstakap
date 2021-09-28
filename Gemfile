@@ -61,6 +61,7 @@ group :production do
   gem 'pg', '0.18.4'
   gem 'bootstrap-sass', '3.3.7'
   gem 'sassc-rails', '>= 2.1.0'
+  gem 'font-awesome-sass', '~> 5.15.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
