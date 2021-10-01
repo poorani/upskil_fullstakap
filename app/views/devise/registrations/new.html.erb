@@ -2,6 +2,15 @@
     <div class="row">
       <div class = "col-md-4 col-md-offset-4">
         <div class="well">
+          <% if params[ :plan] == '1' %>
+          <h2>Weekly Combo Sign up</h2>
+          <% elsif params[:plan] == '2' %>
+          <h2>Monthly Combo Sign Up</h2>
+          <% elsif params[:plan] == '3' %>
+          <h2>Weekend Combo Sign Up</h2>
+          <% else %>
+          <h2>First Timer Sign Up</h2>
+          <% end %>
           
         <h2>Sign up</h2>
         
