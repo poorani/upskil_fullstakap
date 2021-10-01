@@ -8,3 +8,4 @@
 Plan.create(name: 'Weekly', price: 100 )
 Plan.create(name: 'Monthly', price: 340 )
 Plan.create(name: 'Weekend', price: 100 )
+Plan.create(name: 'Guest', price: 0)
