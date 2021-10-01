@@ -8,7 +8,7 @@
             <div class="well">
                 <h2 class="text-center">Weekly Combo</h2>
                 <h4>Late for office? No time to cook? Sign Up for our weekly combo to save time and eat healthy home-made meal!!!</h4>
-                <%= link_to "SignUp for Weekly Combo", "#",class: "btn btn-danger btn-lg btn-block" %>
+                <%= link_to "SignUp for Weekly Combo", new_user_registration_path(plan: @weekly_plan.id),class: "btn btn-danger btn-lg btn-block" %>
                 
             </div>
             
@@ -17,7 +17,7 @@
             <div class="well">
                 <h2 class="text-center">Monthly Combo</h2>
                 <h4>Relax for a month and Save More!!! Sign up for our monthly combo and save 20%!!!</h4>
-                 <%= link_to "SignUp for Monthly Combo", "#",class: "btn btn-warning btn-lg btn-block" %>
+                 <%= link_to "SignUp for Monthly Combo", new_user_registration_path(plan: @monthly_plan.id),class: "btn btn-warning btn-lg btn-block" %>
                 
             </div>
         </div>
@@ -25,9 +25,19 @@
             <div class="well">
                 <h2 class="text-center">Weekend Only Combo</h2>
                 <h4>Want to relax in the weekend and relish the home style feast?!! Sign up for our weekend combo. </h4>
-                 <%= link_to "SignUp for Weekend Combo", "#",class: "btn btn-success btn-lg btn-block" %>
+                 <%= link_to "SignUp for Weekend Combo", new_user_registration_path(plan: @weekend_plan.id),class: "btn btn-success btn-lg btn-block" %>
             </div>            
         </div>
+                    
+        </div>
+        <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="well">
+                <h2 class="text-center">FirstTimer</h2>
+                <h4>Sign up as FirstTimer to try our daily specials </h4>
+                 <%= link_to "Trial Bites", new_user_registration_path(plan: @guest_plan.id),class: "btn btn-info btn-lg btn-block" %>
+            </div>
+             </div>
         
     </div>
 </div>
