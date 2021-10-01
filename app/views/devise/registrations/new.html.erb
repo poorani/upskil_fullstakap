@@ -1,16 +1,24 @@
 <div class="container">
     <div class="row">
-      <div class = "col-md-4 col-md-offset-4">
+      <div class="col-md-6">
+       <% if params[ :plan] == '1' %>
+        <h2>Weekly Combo Sign up</h2>
+        <%= render "weekly_combo" %>
+        <% elsif params[:plan] == '2' %>
+        <h2>Monthly Combo Sign Up</h2>
+         <%= render "monthly_combo" %>
+        <% elsif params[:plan] == '3' %>
+        
+        <h2>Weekend Combo Sign Up</h2>
+         <%= render "weekend_combo" %>
+        <% else %>
+        <h2>First Timer Sign Up</h2>
+         <%= render "first_bites" %>
+        <% end %>
+      </div>
+        <div class = "col-md-6">
         <div class="well">
-          <% if params[ :plan] == '1' %>
-          <h2>Weekly Combo Sign up</h2>
-          <% elsif params[:plan] == '2' %>
-          <h2>Monthly Combo Sign Up</h2>
-          <% elsif params[:plan] == '3' %>
-          <h2>Weekend Combo Sign Up</h2>
-          <% else %>
-          <h2>First Timer Sign Up</h2>
-          <% end %>
+         
           
         <h2>Sign up</h2>
         
@@ -35,7 +43,19 @@
             <%= f.label :password_confirmation %><br />
             <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
           </div>
-        
+         <div class="field form-group">
+            <%= label_tag :card_number, "Credit Card Number" %>
+            <%= text_field_tag :card_number, nil, name: nil, class: "form-control" %>
+          </div>
+          <div class="field form-group">
+            <%= label_tag :card_code, "Security Code on Card (CVV)" %>
+            <%= text_field_tag :card_code, nil, name: nil, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label_tag :card_month, "Card Expiration" %>
+            <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month" } %>
+            <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year" } %>
+          </div>
           <div class="actions form-group">
             <%= f.submit "Sign up", class: 'btn btn-success' %>
           </div>
