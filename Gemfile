@@ -28,6 +28,12 @@ gem 'jbuilder', '~> 2.5'
 # gem for usermembership features
 gem 'devise', '4.4.0'
 
+#strip for payment processing
+gem 'stripe', '1.48.0'
+
+#Figaro for ENV variables secure
+gem 'figaro' , '1.1.1'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
