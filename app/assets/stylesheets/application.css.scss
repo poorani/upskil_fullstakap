@@ -66,8 +66,17 @@
   
  }
 }
-.alert-notice{
- display: none;
+
+.flash-container {
+  position: absolute;
+  width: 100%;
+}
+.alert-notice, .alert-alert {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  margin-top: -30px;
 }
 
 .home_signup_links{

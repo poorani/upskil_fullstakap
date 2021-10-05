@@ -59,7 +59,7 @@
     </div><!-- /.navbar-collapse -->
  </div>
 </nav>
-<div class="container">
+<div class="container flash-container">
     <% flash.each do |typ,msg| %>
         <%= content_tag  :div, msg,class:"alert alert-#{typ}" %>
     <% end %>
